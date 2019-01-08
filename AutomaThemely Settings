@@ -1,3 +1,4 @@
+#!/bin/bash
 automathemely --setting desktop_environment=gnome
 automathemely --setting themes.gnome.light.gtk=Ant-Nebula
 automathemely --setting themes.gnome.light.icons=la-capitaine
