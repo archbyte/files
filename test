@@ -1,0 +1,88 @@
+#!/bin/bash
+# Installing Nautilus-Admin...
+#sudo dnf install nautilus-python
+# Installing Sublime-Text-3
+subl3
+# Installing Plank...
+#sudo dnf install plank
+sudo cp /usr/share/plank/themes/Default/dock.theme /usr/share/plank/themes/Default/dockbackup.theme && sudo cp /usr/share/plank/themes/Transparent/dock.theme /usr/share/plank/themes/Default/dock.theme
+# Installing Gnome-Tweaks...
+#sudo dnf install gnome-tweaks
+# Installing Libinput-Gestures...
+#sudo gpasswd -a $USER input
+#sudo dnf install xdotool wmctrl
+#git clone https://github.com/bulletmark/libinput-gestures.git
+#cd libinput-gestures
+#sudo make install
+#libinput-gestures-setup autostart
+#cp /etc/libinput-gestures.conf ~/.config/libinput-gestures.conf
+#sed -i '50s/.*/gesture swipe up 3 _internal ws_up/' ~/.config/libinput-gestures.conf
+#sed -i '63s/.*/gesture swipe down 3 _internal ws_down/' ~/.config/libinput-gestures.conf
+#sed -i '67s/.*/gesture swipe left 3 xdotool key alt+Right/' ~/.config/libinput-gestures.conf
+#sed -i '70s/.*/gesture swipe right 3 xdotool key alt+Left/' ~/.config/libinput-gestures.conf
+#sed -i '118s/.*/gesture swipe left_up 3 xdotool key super+a/' ~/.config/libinput-gestures.conf
+#sed -i '119s/.*/gesture swipe left_down 3 xdotool key super+s/' ~/.config/libinput-gestures.conf
+# Installing Sublime-Text-License...
+echo "Editing /etc/hosts file for sublime text..."
+echo '127.0.0.1       www.sublimetext.com' | sudo tee --append /etc/hosts
+echo '127.0.0.1       license.sublimehq.com'| sudo tee --append /etc/hosts
+cat << EOT >> /home/$USER/.config/sublime-text-3/Local/License.sublime_license
+----- BEGIN LICENSE -----
+sgbteam
+Single User License
+EA7E-1153259
+8891CBB9 F1513E4F 1A3405C1 A865D53F
+115F202E 7B91AB2D 0D2A40ED 352B269B
+76E84F0B CD69BFC7 59F2DFEF E267328F
+215652A3 E88F9D8F 4C38E3BA 5B2DAAE4
+969624E7 DC9CD4D5 717FB40C 1B9738CF
+20B3C4F1 E917B5B3 87C38D9C ACCE7DD8
+5F7EF854 86B9743C FADC04AA FB0DA5C0
+F913BE58 42FEA319 F954EFDD AE881E0B
+------ END LICENSE ------
+EOT
+# Installing Gnome Extensions...
+#cd /home/$USER
+#wget -O gnome-shell-extension-installer "https://github.com/brunelli/gnome-shell-extension-installer/raw/master/gnome-shell-extension-installer"
+#chmod +x gnome-shell-extension-installer
+#sudo mv gnome-shell-extension-installer /usr/bin
+#gnome-shell-extension-installer 19 545 277 36 1303 118 1297 800 826 1031 1236
+# Disabling Wayland in GDM...
+#sudo sed -i '/WaylandEnable=false/s/^#//' /etc/gdm/custom.conf
+# Changing background to Mojave...
+sudo cp -r /usr/share/backgrounds/gnomebackup
+sudo rm -r /usr/share/backgrounds/gnome
+sudo cp -r /usr/share/gnome-background-properties
+sudo rm -r /usr/share/gnome-background-properties
+sudo git clone https://github.com/archbyte/mojave /usr/share/backgrounds/gnome
+sudo rm -r /usr/share/backgrounds/gnome/.git
+sudo mkdir /usr/share/gnome-background-properties
+sudo mv /usr/share/backgrounds/gnome/gnome-backgrounds.xml /usr/share/gnome-background-properties
+# Installing Gnome Themes...
+sudo git clone https://github.com/EliverLara/Ant-Nebula --branch slim /usr/share/themes/Ant-Nebula
+sudo git clone https://github.com/paullinuxthemer/Dark-Side /usr/share/themes/Dark-Side
+# Setting gSettings...
+gsettings set org.gnome.Terminal.Legacy.Settings default-show-menubar false
+gsettings set org.gnome.settings-daemon.plugins.xsettings antialiasing 'rgba'
+gsettings set org.gnome.settings-daemon.plugins.color night-light-enabled true
+gsettings set org.gnome.mutter attach-modal-dialogs false
+gsettings set org.gnome.mutter center-new-windows true
+gsettings set org.gnome.mutter edge-tiling true
+gsettings set org.gnome.desktop.wm.preferences resize-with-right-button false
+gsettings set org.gnome.nautilus.window-state sidebar-width 157
+gsettings set org.gnome.nautilus.window-state initial-size '(794, 485)'
+gsettings set org.gnome.desktop.interface show-battery-percentage true
+gsettings set org.gnome.desktop.interface clock-show-date true
+gsettings set org.gnome.desktop.interface clock-show-seconds true
+gsettings set org.gnome.desktop.datetime automatic-timezone true
+gsettings set org.gnome.desktop.interface clock-format 12h
+#gsettings set org.gnome.desktop.interface font-name 'Clear Sans Medium, Medium 11'
+#gsettings set org.gnome.desktop.interface document-font-name 'Clear Sans 11'
+#gsettings set org.gnome.desktop.interface monospace-font-name 'Clear Sans Thin, weight=255 11'
+#gsettings set org.gnome.desktop.wm.preferences titlebar-font 'Clear Sans Bold 11'
+gsettings set org.gnome.desktop.wm.preferences button-layout 'close,minimize,maximize:'
+#gsettings set org.gnome.desktop.interface icon-theme 'la-capitaine'
+#gsettings set org.gnome.desktop.interface cursor-theme 'capitaine-cursors'
+gsettings set org.gnome.desktop.background picture-uri /usr/share/backgrounds/gnome/mojave-timed.xml
+gsettings set org.gnome.desktop.screensaver picture-uri /usr/share/backgrounds/gnome/mojave-timed.xml
+# Done. Reboot required for touchpad gestures...
