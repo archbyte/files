@@ -19,7 +19,9 @@ Commands:
   reset                     Reset the value of a key
   reset-recursively         Reset all values in a given schema
   writable                  Check if a key is writable
-  monitor                   Watch for changes
+  monitor                   Watch for changes---------------|
+  							    |
+  dconf watch /		    Monitor for all changes---------|
 
 Use “gsettings help COMMAND” to get detailed help.
 _____________________________________________________________
