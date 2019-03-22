@@ -1,0 +1,60 @@
+    1  ls
+    2  ./gnome1
+    3  ls
+    4  lsblk
+    5  sudo grub-mkconfig -o /boot/grub/grub.cfg
+    6  sudo grub-mkconfig -o /boot/grub/grub.cfg
+    7  sudo pacman -S os-prober
+    8  sudo pacman -S --needed gnome-disk-utility ttf-hack ntfs-3g xorg-server xorg-xinit xorg-xprop budgie-desktop budgie-extras gdm nautilus gnome-terminal gnome-backgrounds gnome-control-center gnome-screensaver network-manager-applet autoconf-archive git gobject-introspection intltool meson sassc vala gnome-system-monitor gnome-screenshot gnome-power-manager eog gnome-tweak-tool xdg-user-dirs base-devel git bash curl dbus perl less wget bluez-utils gtk-engine-murrine gtk-engines xdotool wmctrl chromium plank tree neofetch reflector gparted unzip
+    9  exit
+   10  sudo pacman -S --needed deepin
+   11  sudo pacman -S --needed deepin
+   12  sudo pacman -S --needed deepin-editor deepin-terminal deepin-screenshot
+   13  exit
+   14  sudo pacman -S --needed awesome
+   15  sudo pacman -S --needed awesome ttf-roboto
+   16  sudo pacman -S --needed awesome ttf-roboto rofi
+   17  git clone https://github.com/tryone144/compton.git
+   18  cd compton/
+   19  make
+   20  sudo pacman -S --needed awesome ttf-roboto rofi materia-gtk-theme
+   21  sudo pacman -S --needed awesome ttf-roboto rofi materia-gtk-theme papirus-icon-theme
+   22  sudo pacman -S --needed awesome ttf-roboto rofi materia-gtk-theme papirus-icon-theme libx11 libxcomposite libxdamage libxfixes libxext libxrender libxrandr libxinerama pkg-config make xproto x11proto sh
+   23  sudo pacman -S --needed awesome ttf-roboto rofi materia-gtk-theme papirus-icon-theme libx11 libxcomposite libxdamage libxfixes libxext libxrender libxrandr libxinerama pkg-config make xorgproto sh
+   24  sudo pacman -S --needed awesome ttf-roboto rofi materia-gtk-theme papirus-icon-theme libx11 libxcomposite libxdamage libxfixes libxext libxrender libxrandr libxinerama pkg-config make xorgproto sh xorg-xprop xorg-xwininfo
+   25  sudo pacman -S --needed awesome ttf-roboto rofi materia-gtk-theme papirus-icon-theme libx11 libxcomposite libxdamage libxfixes libxext libxrender libxrandr libxinerama pkg-config make xorgproto sh xorg-xprop xorg-xwininfo lib32-pcre
+   26  sudo pacman -S --needed awesome ttf-roboto rofi materia-gtk-theme papirus-icon-theme libx11 libxcomposite libxdamage libxfixes libxext libxrender libxrandr libxinerama pkg-config make xorgproto sh xorg-xprop xorg-xwininfo pcre
+   27  sudo pacman -S --needed awesome ttf-roboto rofi materia-gtk-theme papirus-icon-theme libx11 libxcomposite libxdamage libxfixes libxext libxrender libxrandr libxinerama pkg-config make xorgproto sh xorg-xprop xorg-xwininfo pcre libconfig
+   28  sudo pacman -S --needed awesome ttf-roboto rofi materia-gtk-theme papirus-icon-theme libx11 libxcomposite libxdamage libxfixes libxext libxrender libxrandr libxinerama pkg-config make xorgproto sh xorg-xprop xorg-xwininfo pcre libconfig libdrm
+   29  sudo pacman -S --needed awesome ttf-roboto rofi materia-gtk-theme papirus-icon-theme libx11 libxcomposite libxdamage libxfixes libxext libxrender libxrandr libxinerama pkg-config make xorgproto sh xorg-xprop xorg-xwininfo pcre libconfig libdrm mesa
+   30  sudo pacman -S --needed awesome ttf-roboto rofi materia-gtk-theme papirus-icon-theme libx11 libxcomposite libxdamage libxfixes libxext libxrender libxrandr libxinerama pkg-config make xorgproto sh xorg-xprop xorg-xwininfo pcre libconfig libdrm mesa dbus
+   31  sudo pacman -S --needed awesome ttf-roboto rofi materia-gtk-theme papirus-icon-theme libx11 libxcomposite libxdamage libxfixes libxext libxrender libxrandr libxinerama pkg-config make xorgproto sh xorg-xprop xorg-xwininfo pcre libconfig libdrm mesa dbus asciidoc
+   32  make
+   33  make docs
+   34  make install
+   35  sudo make install
+   36  sudo pacman -S --needed awesome ttf-roboto rofi materia-gtk-theme papirus-icon-theme libx11 libxcomposite libxdamage libxfixes libxext libxrender libxrandr libxinerama pkg-config make xorgproto sh xorg-xprop xorg-xwininfo pcre libconfig libdrm mesa dbus asciidoc lxde
+   37  cd
+   38  clear
+   39  ls
+   40  git clone https://github.com/PapyElGringo/material-awesome.git ~/.config/awesome
+   41  exit
+   42  history
+   43  exit
+   44  clear
+   45  sudo ls /etc/X11/xorg.conf.d/
+   46  sudo ls /etc/X11/xorg.conf.d
+   47  xinput list
+   48  xinput-list
+   49  clear
+   50  sudo ls /usr/share/X11/xorg.conf.d/
+   51  sudo nano /usr/share/X11/xorg.conf.d/40-libinput.conf 
+   52  xinput list-devices
+   53  sudo pacman -S --needed xorg-xinput
+   54  xinput list-devices
+   55  xinput list
+   56  xinput list-props 10
+   57  xinput set-prop 10 287 1
+   58  ls
+   59  reboot
+   60  history > history
